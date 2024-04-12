@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({super.key});
+  const MyHomePage({super.key});
 
   // String _currentFortune = "";
 
@@ -70,18 +70,21 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 200,
               fit: BoxFit.cover,
             ),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  '${_currentFortune}',
-                  style: Theme.of(context).textTheme.titleMedium,
+            Visibility(
+              visible: _currentFortune.isNotEmpty,
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    _currentFortune,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                 ),
               ),
             ),
             ElevatedButton(
               onPressed: _randomFortune,
-              child: Text('Get Fortune'),
+              child: const Text('Get Fortune'),
             )
           ],
         ),
