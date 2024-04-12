@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key});
 
-  String _currentFortune = "";
+  // String _currentFortune = "";
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -36,11 +36,16 @@ class _MyHomePageState extends State<MyHomePage> {
   String _currentFortune = "";
 
   final _fortuneList = [
-    "You will find a new friend",
-    "You will win the lottery",
-    "You are going to sleep well",
-    "You will find a new home",
-    "Anything can happen because this sentence is much longer than the rest"
+    "Unexpected opportunities will arise today",
+    "A pleasant surprise awaits you around the corner",
+    "Your hard work will pay off sooner than you think",
+    "Embrace change; it leads to new beginnings",
+    "Today is a perfect day to start something new",
+    "Your creativity will shine brightly today",
+    "Luck is on your side; trust your instincts",
+    "Take a leap of faith; great adventures await",
+    "A cheerful encounter will brighten your day",
+    "Your kindness will be repaid in unexpected ways"
   ];
 
   void _randomFortune() {
